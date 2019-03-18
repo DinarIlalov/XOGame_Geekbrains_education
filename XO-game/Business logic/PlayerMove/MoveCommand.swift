@@ -1,5 +1,5 @@
 //
-//  GameMode.swift
+//  MoveCommand.swift
 //  XO-game
 //
 //  Created by Dinar Ilalov on 18/03/2019.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-enum GameMode {
-    case onePlayer
-    case twoPlayers
-    case fiveInTurn
+protocol MoveCommand {
+    
+    func execute()
 }

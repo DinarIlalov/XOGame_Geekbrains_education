@@ -48,6 +48,21 @@
             </objects>
             <point key="canvasLocation" x="295.19999999999999" y="133.5832083958021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3TJ-3n-ptk">
+            <objects>
+                <viewController id="3ac-3M-UrC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Urg-Jx-LRv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pvq-Mt-Bsf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMo-bI-oFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="-593"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
