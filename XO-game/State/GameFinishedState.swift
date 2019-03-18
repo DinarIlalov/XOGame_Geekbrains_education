@@ -37,5 +37,5 @@ class GameFinishedState: GameState {
         }
     }
     
-    func addMark(at position: GameboardPosition) { }
+    func addMark(at position: GameboardPosition?) { }
 }

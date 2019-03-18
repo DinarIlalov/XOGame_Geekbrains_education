@@ -1,15 +1,14 @@
 //
-//  PlayerInputState.swift
+//  ArtificialIntelligenceInputState.swift
 //  XO-game
 //
-//  Created by Evgeny Kireev on 16/03/2019.
+//  Created by Dinar Ilalov on 18/03/2019.
 //  Copyright © 2019 plasmon. All rights reserved.
 //
 
 import Foundation
 
-class PlayerInputState: GameState {
-    
+final class ArtificialIntelligenceInputState: GameState {
     var isCompleted: Bool = false
     
     let player: Player
@@ -39,11 +38,13 @@ class PlayerInputState: GameState {
     }
     
     func addMark(at position: GameboardPosition?) {
-        guard !self.isCompleted, let position = position else { return }
-        guard gameboard?.containsAnyPlayer(at: position) == false else { return }
+        guard !self.isCompleted else { return }
+        guard let position = gameboard?.randomEmptyPosition() else { return }
+        
         Log(.playerInput(player: self.player, position: position))
         self.gameboard?.setPlayer(self.player, at: position)
         self.gameboardView?.placeMarkView(self.markViewPrototype.copy(), at: position)
         self.isCompleted = true
     }
+    
 }

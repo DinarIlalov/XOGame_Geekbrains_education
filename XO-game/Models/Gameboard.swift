@@ -44,17 +44,28 @@ public final class Gameboard {
     }
     
     public func areAllPositionsFullfilled() -> Bool {
-        for array in positions {
-            for position in array{
-                if position == nil {
-                    return false
-                }
-            }
-        }
-        return true
+        return emptyPositions().count == 0
+    }
+    
+    
+    public func randomEmptyPosition() -> GameboardPosition? {
+        return emptyPositions().randomElement()
     }
     
     // MARK: - Private
+    
+    private func emptyPositions() -> [GameboardPosition] {
+        var emptyPositions: [GameboardPosition] = []
+        
+        for (column, array) in positions.enumerated() {
+            for (row, player) in array.enumerated() {
+                if player == nil {
+                    emptyPositions.append(GameboardPosition(column: column, row: row))
+                }
+            }
+        }
+        return emptyPositions
+    }
     
     private func initialPositions() -> [[Player?]] {
         var positions: [[Player?]] = []

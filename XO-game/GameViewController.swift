@@ -33,6 +33,8 @@ class GameViewController: UIViewController, GameViewInput {
     }
     
     var currentPlayer: Player = .first
+    var gameMode: GameMode!
+    var aiPlayer: Player?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +51,18 @@ class GameViewController: UIViewController, GameViewInput {
         gameboard.clear()
         gameboardView.clear()
         self.currentPlayer = .first
+        if gameMode == .onePlayer {
+            self.aiPlayer = Player.random()
+        }
         switchToFirstState()
     }
     
     private func switchToFirstState() {
-        switchToPlayerInputState(with: .first)
+        if gameMode == .onePlayer && aiPlayer == .first {
+            switchToAIInputState(with: .first)
+        } else {
+            switchToPlayerInputState(with: .first)
+        }
     }
     
     private func switchToNextState() {
@@ -62,6 +71,14 @@ class GameViewController: UIViewController, GameViewInput {
             switchToFinishedState(with: winner)
         } else if gameboard.areAllPositionsFullfilled() {
             switchToFinishedState(with: nil)
+        } else if gameMode == .onePlayer {
+            if currentPlayer == aiPlayer {
+                currentPlayer = currentPlayer.next
+                switchToPlayerInputState(with: currentPlayer)
+            } else {
+                currentPlayer = currentPlayer.next
+                switchToAIInputState(with: currentPlayer)
+            }
         } else {
             currentPlayer = currentPlayer.next
             switchToPlayerInputState(with: currentPlayer)
@@ -77,6 +94,19 @@ class GameViewController: UIViewController, GameViewInput {
                                         gameboardView: gameboardView,
                                         gameViewInput: self,
                                         markViewPrototype: prototype)
+    }
+    
+    private func switchToAIInputState(with player: Player) {
+        let prototype = player.markViewPrototype
+        prototype.lineColor = .blue
+        prototype.layoutSubviews()
+        currentState = ArtificialIntelligenceInputState(player: player,
+                                        gameboard: gameboard,
+                                        gameboardView: gameboardView,
+                                        gameViewInput: self,
+                                        markViewPrototype: prototype)
+        currentState.addMark(at: nil)
+        self.switchToNextState()
     }
     
     private func switchToFinishedState(with winner: Player?) {
