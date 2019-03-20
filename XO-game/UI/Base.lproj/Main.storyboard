@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-Bt-cmb">
-                                <rect key="frame" x="125.5" y="245.5" width="124" height="176"/>
+                                <rect key="frame" x="125.5" y="209" width="124" height="249"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-aE-0Zn">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
@@ -42,6 +42,13 @@
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="fiveMovesGameSegue" id="wlH-83-o8t"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4k-5n-euq">
+                                        <rect key="frame" x="26.5" y="219" width="71" height="30"/>
+                                        <state key="normal" title="Светофор"/>
+                                        <connections>
+                                            <segue destination="33m-2d-0d2" kind="show" id="CGt-hi-xGZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -57,6 +64,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMO-3e-qeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="295.19999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--TrafficLight-->
+        <scene sceneID="oUn-5B-67o">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrafficLight" id="33m-2d-0d2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLZ-2A-fT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="590"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3TJ-3n-ptk">

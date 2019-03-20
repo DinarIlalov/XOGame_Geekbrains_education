@@ -16,6 +16,17 @@
 		6B742CD4223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD3223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift */; };
 		6B742CD6223FD7E700354DB1 /* GameStateFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD5223FD7E700354DB1 /* GameStateFacade.swift */; };
 		6B742CD82240E05A00354DB1 /* FiveMovesModeExecuteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD72240E05A00354DB1 /* FiveMovesModeExecuteState.swift */; };
+		6B742CDB2242306E00354DB1 /* TrafficLight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B742CDA2242306E00354DB1 /* TrafficLight.storyboard */; };
+		6B742CDD2242310000354DB1 /* TrafficLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CDC2242310000354DB1 /* TrafficLightViewController.swift */; };
+		6B742CDF2242316000354DB1 /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CDE2242316000354DB1 /* TrafficLightView.swift */; };
+		6B742CE5224231F800354DB1 /* LoadXibableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CE3224231F800354DB1 /* LoadXibableView.swift */; };
+		6B742CE6224231F800354DB1 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CE4224231F800354DB1 /* XibView.swift */; };
+		6B742CE92242322E00354DB1 /* TrafficLightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B742CE82242322E00354DB1 /* TrafficLightView.xib */; };
+		6B742CEC22423C6A00354DB1 /* TrafficLightControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CEB22423C6A00354DB1 /* TrafficLightControl.swift */; };
+		6B742CF12242402C00354DB1 /* TrafficLightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CF02242402C00354DB1 /* TrafficLightState.swift */; };
+		6B742CF32242406D00354DB1 /* GreenTrafficLightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CF22242406D00354DB1 /* GreenTrafficLightState.swift */; };
+		6B742CF522424DB500354DB1 /* YellowTrafficLightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CF422424DB500354DB1 /* YellowTrafficLightState.swift */; };
+		6B742CF722424E2400354DB1 /* RedTrafficLightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CF622424E2400354DB1 /* RedTrafficLightState.swift */; };
 		F81F9036223D4E9D00D9EA4A /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9035223D4E9D00D9EA4A /* GameState.swift */; };
 		F81F9038223D4F1C00D9EA4A /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9037223D4F1C00D9EA4A /* PlayerInputState.swift */; };
 		F81F903A223D548C00D9EA4A /* GameFinishedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9039223D548C00D9EA4A /* GameFinishedState.swift */; };
@@ -50,6 +61,17 @@
 		6B742CD3223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputStateFiveMoves.swift; sourceTree = "<group>"; };
 		6B742CD5223FD7E700354DB1 /* GameStateFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateFacade.swift; sourceTree = "<group>"; };
 		6B742CD72240E05A00354DB1 /* FiveMovesModeExecuteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMovesModeExecuteState.swift; sourceTree = "<group>"; };
+		6B742CDA2242306E00354DB1 /* TrafficLight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrafficLight.storyboard; sourceTree = "<group>"; };
+		6B742CDC2242310000354DB1 /* TrafficLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightViewController.swift; sourceTree = "<group>"; };
+		6B742CDE2242316000354DB1 /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
+		6B742CE3224231F800354DB1 /* LoadXibableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadXibableView.swift; sourceTree = "<group>"; };
+		6B742CE4224231F800354DB1 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		6B742CE82242322E00354DB1 /* TrafficLightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrafficLightView.xib; sourceTree = "<group>"; };
+		6B742CEB22423C6A00354DB1 /* TrafficLightControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightControl.swift; sourceTree = "<group>"; };
+		6B742CF02242402C00354DB1 /* TrafficLightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightState.swift; sourceTree = "<group>"; };
+		6B742CF22242406D00354DB1 /* GreenTrafficLightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenTrafficLightState.swift; sourceTree = "<group>"; };
+		6B742CF422424DB500354DB1 /* YellowTrafficLightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowTrafficLightState.swift; sourceTree = "<group>"; };
+		6B742CF622424E2400354DB1 /* RedTrafficLightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTrafficLightState.swift; sourceTree = "<group>"; };
 		F81F9035223D4E9D00D9EA4A /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F81F9037223D4F1C00D9EA4A /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		F81F9039223D548C00D9EA4A /* GameFinishedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishedState.swift; sourceTree = "<group>"; };
@@ -136,6 +158,72 @@
 			path = PlayerMove;
 			sourceTree = "<group>";
 		};
+		6B742CD92242303900354DB1 /* Traffic light */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CE02242318600354DB1 /* Library */,
+				6B742CDA2242306E00354DB1 /* TrafficLight.storyboard */,
+				6B742CDC2242310000354DB1 /* TrafficLightViewController.swift */,
+				6B742CEA2242323500354DB1 /* TrafficLight */,
+			);
+			path = "Traffic light";
+			sourceTree = "<group>";
+		};
+		6B742CE02242318600354DB1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CE72242320A00354DB1 /* XibableView */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		6B742CE72242320A00354DB1 /* XibableView */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CE3224231F800354DB1 /* LoadXibableView.swift */,
+				6B742CE4224231F800354DB1 /* XibView.swift */,
+			);
+			path = XibableView;
+			sourceTree = "<group>";
+		};
+		6B742CEA2242323500354DB1 /* TrafficLight */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CEE2242401500354DB1 /* Logic */,
+				6B742CED2242400F00354DB1 /* UI */,
+				6B742CEB22423C6A00354DB1 /* TrafficLightControl.swift */,
+			);
+			path = TrafficLight;
+			sourceTree = "<group>";
+		};
+		6B742CED2242400F00354DB1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CE82242322E00354DB1 /* TrafficLightView.xib */,
+				6B742CDE2242316000354DB1 /* TrafficLightView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6B742CEE2242401500354DB1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CEF2242401C00354DB1 /* State */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		6B742CEF2242401C00354DB1 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				6B742CF02242402C00354DB1 /* TrafficLightState.swift */,
+				6B742CF22242406D00354DB1 /* GreenTrafficLightState.swift */,
+				6B742CF422424DB500354DB1 /* YellowTrafficLightState.swift */,
+				6B742CF622424E2400354DB1 /* RedTrafficLightState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		F81F9034223D4E8900D9EA4A /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +268,7 @@
 		F874E46F2224621100364CAE /* XO-game */ = {
 			isa = PBXGroup;
 			children = (
+				6B742CD92242303900354DB1 /* Traffic light */,
 				6B742CCA223FC8A000354DB1 /* Assembly */,
 				6B742CC4223FA1D000354DB1 /* Business logic */,
 				F874E4702224621100364CAE /* AppDelegate.swift */,
@@ -281,6 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F874E47B2224621300364CAE /* LaunchScreen.storyboard in Resources */,
+				6B742CE92242322E00354DB1 /* TrafficLightView.xib in Resources */,
+				6B742CDB2242306E00354DB1 /* TrafficLight.storyboard in Resources */,
 				F874E4782224621300364CAE /* Assets.xcassets in Resources */,
 				F874E4762224621100364CAE /* Main.storyboard in Resources */,
 			);
@@ -299,24 +390,33 @@
 				F874E4DF2225C76000364CAE /* MarkView.swift in Sources */,
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
+				6B742CE6224231F800354DB1 /* XibView.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
+				6B742CE5224231F800354DB1 /* LoadXibableView.swift in Sources */,
 				6B742CD82240E05A00354DB1 /* FiveMovesModeExecuteState.swift in Sources */,
+				6B742CDD2242310000354DB1 /* TrafficLightViewController.swift in Sources */,
 				F81F903C223D5CEC00D9EA4A /* Copying.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
 				6B742CD0223FC99C00354DB1 /* MoveCommand.swift in Sources */,
+				6B742CDF2242316000354DB1 /* TrafficLightView.swift in Sources */,
 				F81F903F223D64A000D9EA4A /* LogAction.swift in Sources */,
 				F81F903A223D548C00D9EA4A /* GameFinishedState.swift in Sources */,
 				6B742CD4223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift in Sources */,
 				F81F9045223D652100D9EA4A /* LoggerInvoker.swift in Sources */,
+				6B742CF522424DB500354DB1 /* YellowTrafficLightState.swift in Sources */,
 				6B742CCE223FC94300354DB1 /* PlayerMove.swift in Sources */,
 				F81F9041223D64E000D9EA4A /* LogCommand.swift in Sources */,
 				6B742CC7223FA1F600354DB1 /* GameMode.swift in Sources */,
 				F81F9043223D64F800D9EA4A /* Logger.swift in Sources */,
+				6B742CF12242402C00354DB1 /* TrafficLightState.swift in Sources */,
 				6B742CD2223FCA4000354DB1 /* MoveInvoker.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
 				6B742CC3223F9E8200354DB1 /* MainMenuViewController.swift in Sources */,
 				F81F9036223D4E9D00D9EA4A /* GameState.swift in Sources */,
+				6B742CEC22423C6A00354DB1 /* TrafficLightControl.swift in Sources */,
+				6B742CF722424E2400354DB1 /* RedTrafficLightState.swift in Sources */,
+				6B742CF32242406D00354DB1 /* GreenTrafficLightState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
 				6B742CD6223FD7E700354DB1 /* GameStateFacade.swift in Sources */,
 				F874E4EF2225DE4500364CAE /* Player.swift in Sources */,
