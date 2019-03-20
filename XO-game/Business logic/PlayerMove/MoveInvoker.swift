@@ -27,17 +27,31 @@ final class MoveInvoker {
     }
     
     func addMove(for player: Player, at position: GameboardPosition) {
+        
+        let playerMove = PlayerMove(position: position, player: player, gameboard: gameboard, gameboardView: gameboardView)
         switch player {
         case .first:
-            firstPlayerMoves.append(PlayerMove(position: position, gameboard: gameboard, gameboardView: gameboardView))
+            firstPlayerMoves.append(playerMove)
         case .second:
-            secondPlayerMoves.append(PlayerMove(position: position, gameboard: gameboard, gameboardView: gameboardView))
+            secondPlayerMoves.append(playerMove)
         }
     }
     
-    func executePlayersMove() -> Bool {
-        guard firstPlayerMoves.count >= 5 &&
-            secondPlayerMoves.count >= 5 else { return false }
+    func isMovesMade(by player: Player) -> Bool {
+        if player == .first {
+            return firstPlayerMoves.count >= movesAtTurn
+        } else {
+            return secondPlayerMoves.count >= movesAtTurn
+        }
+    }
+    
+    func isAllMovesMade() -> Bool {
+        return firstPlayerMoves.count >= movesAtTurn && secondPlayerMoves.count >= movesAtTurn
+    }
+    
+    func executePlayersMove() {
+        guard firstPlayerMoves.count >= movesAtTurn &&
+            secondPlayerMoves.count >= movesAtTurn else { return }
         
         for moveStep in (0..<movesAtTurn) {
             // player two
@@ -47,8 +61,8 @@ final class MoveInvoker {
             let secondPlayerMoveCommand = secondPlayerMoves[moveStep]
             secondPlayerMoveCommand.execute()
         }
-        
-        return true
+        firstPlayerMoves = []
+        secondPlayerMoves = []
     }
 }
 

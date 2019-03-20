@@ -16,6 +16,7 @@ class PlayerInputStateFiveMoves: GameState {
     weak var gameboard: Gameboard?
     weak var gameboardView: GameboardView?
     weak var gameViewInput: GameViewInput?
+    weak var movesInvoker: MoveInvoker?
     let markViewPrototype: MarkView
     
     init(player: Player, gameboard: Gameboard, gameboardView: GameboardView, gameViewInput: GameViewInput, markViewPrototype: MarkView) {
@@ -42,10 +43,14 @@ class PlayerInputStateFiveMoves: GameState {
         guard !self.isCompleted, let position = position else { return }
         guard gameboard?.containsAnyPlayer(at: position) == false else { return }
         
-        guard let gameViewController = gameViewInput as? GameViewController else { return }
+        movesInvoker?.addMove(for: player, at: position)
+        self.gameboardView?.placeMarkView(self.markViewPrototype.copy(), at: position)
         
-        gameViewController.movesInvoker.addMove(for: player, at: position)
+        let playerMadeAllMoves = movesInvoker?.isMovesMade(by: player) == true
         
-        self.isCompleted = gameViewController.movesInvoker.executePlayersMove()
+        if playerMadeAllMoves {
+            gameboardView?.clear()
+        }
+        self.isCompleted = playerMadeAllMoves
     }
 }

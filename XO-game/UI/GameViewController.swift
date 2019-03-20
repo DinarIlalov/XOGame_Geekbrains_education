@@ -25,28 +25,22 @@ class GameViewController: UIViewController, GameViewInput {
     @IBOutlet var restartButton: UIButton!
     
     // MARK: dependicies
-    private let gameboard = Gameboard()
-    private lazy var referee = Referee(gameboard: self.gameboard)
+    let gameboard = Gameboard()
     
     private lazy var gameStateFacade: GameStateFacade = {
-        return GameStateFacade(gameMode: self.gameMode)
+        return GameStateFacade(gameViewInput: self)
     }()
     
-    var currentPlayer: Player = .first
     var gameMode: GameMode!
+    var currentPlayer: Player = .first
     var aiPlayer: Player?
-    
-    lazy var movesInvoker: MoveInvoker = {
-        return MoveInvoker(moveMode: .fiveInTurn, gameboard: self.gameboard, gameboardView: self.gameboardView)
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        switchToFirstState()
+        gameStateFacade.switchToFirstState()
+        
         gameboardView.onSelectPosition = { [weak self] position in
-            guard let self = self else { return }
-            self.gameStateFacade.addMark(at: position)
-            self.switchToNextState()
+            self?.gameStateFacade.addMarkAndSwitchToNextState(at: position)
         }
     }
     
@@ -58,64 +52,7 @@ class GameViewController: UIViewController, GameViewInput {
         if gameMode == .onePlayer {
             self.aiPlayer = Player.random()
         }
-        switchToFirstState()
-    }
-    
-    private func switchToFirstState() {
-        if gameMode == .onePlayer && aiPlayer == .first {
-            switchToAIInputState(with: .first)
-        } else {
-            switchToPlayerInputState(with: .first)
-        }
-    }
-    
-    private func switchToNextState() {
-        guard self.currentState.isCompleted else { return }
-        if let winner = referee.determineWinner() {
-            switchToFinishedState(with: winner)
-        } else if gameboard.areAllPositionsFullfilled() {
-            switchToFinishedState(with: nil)
-        } else if gameMode == .onePlayer {
-            if currentPlayer == aiPlayer {
-                currentPlayer = currentPlayer.next
-                switchToPlayerInputState(with: currentPlayer)
-            } else {
-                currentPlayer = currentPlayer.next
-                switchToAIInputState(with: currentPlayer)
-            }
-        } else {
-            currentPlayer = currentPlayer.next
-            switchToPlayerInputState(with: currentPlayer)
-        }
-    }
-    
-    private func switchToPlayerInputState(with player: Player) {
-        let prototype = player.markViewPrototype
-        prototype.lineColor = player == .first ? .red : .black
-        prototype.layoutSubviews()
-        currentState = PlayerInputState(player: player,
-                                        gameboard: gameboard,
-                                        gameboardView: gameboardView,
-                                        gameViewInput: self,
-                                        markViewPrototype: prototype)
-    }
-    
-    private func switchToAIInputState(with player: Player) {
-        let prototype = player.markViewPrototype
-        prototype.lineColor = .blue
-        prototype.layoutSubviews()
-        currentState = ArtificialIntelligenceInputState(player: player,
-                                        gameboard: gameboard,
-                                        gameboardView: gameboardView,
-                                        gameViewInput: self,
-                                        markViewPrototype: prototype)
-        currentState.addMark(at: nil)
-        self.switchToNextState()
-    }
-    
-    private func switchToFinishedState(with winner: Player?) {
-        currentState = GameFinishedState(winner: winner,
-                                         gameViewInput: self)
+        self.gameStateFacade.switchToFirstState()
     }
 }
 

@@ -16,11 +16,13 @@ class MainMenuViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       switch segue.identifier {
+        switch segue.identifier {
         case "twoPlayersGameSegue":
             prepareGame(gameMode: .twoPlayers, gameController: segue.destination)
         case "onePlayerGameSegue":
             prepareGame(gameMode: .onePlayer, gameController: segue.destination)
+        case "fiveMovesGameSegue":
+            prepareGame(gameMode: .fiveInTurn, gameController: segue.destination)
         default:
             break
         }

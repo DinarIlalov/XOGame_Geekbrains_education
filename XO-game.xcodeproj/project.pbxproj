@@ -15,6 +15,7 @@
 		6B742CD2223FCA4000354DB1 /* MoveInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD1223FCA4000354DB1 /* MoveInvoker.swift */; };
 		6B742CD4223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD3223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift */; };
 		6B742CD6223FD7E700354DB1 /* GameStateFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD5223FD7E700354DB1 /* GameStateFacade.swift */; };
+		6B742CD82240E05A00354DB1 /* FiveMovesModeExecuteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B742CD72240E05A00354DB1 /* FiveMovesModeExecuteState.swift */; };
 		F81F9036223D4E9D00D9EA4A /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9035223D4E9D00D9EA4A /* GameState.swift */; };
 		F81F9038223D4F1C00D9EA4A /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9037223D4F1C00D9EA4A /* PlayerInputState.swift */; };
 		F81F903A223D548C00D9EA4A /* GameFinishedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F9039223D548C00D9EA4A /* GameFinishedState.swift */; };
@@ -48,6 +49,7 @@
 		6B742CD1223FCA4000354DB1 /* MoveInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveInvoker.swift; sourceTree = "<group>"; };
 		6B742CD3223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputStateFiveMoves.swift; sourceTree = "<group>"; };
 		6B742CD5223FD7E700354DB1 /* GameStateFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateFacade.swift; sourceTree = "<group>"; };
+		6B742CD72240E05A00354DB1 /* FiveMovesModeExecuteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMovesModeExecuteState.swift; sourceTree = "<group>"; };
 		F81F9035223D4E9D00D9EA4A /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F81F9037223D4F1C00D9EA4A /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		F81F9039223D548C00D9EA4A /* GameFinishedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishedState.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				F81F9037223D4F1C00D9EA4A /* PlayerInputState.swift */,
 				6B742CC8223FA35400354DB1 /* ArtificialIntelligenceInputState.swift */,
 				6B742CD3223FD0DA00354DB1 /* PlayerInputStateFiveMoves.swift */,
+				6B742CD72240E05A00354DB1 /* FiveMovesModeExecuteState.swift */,
 				F81F9039223D548C00D9EA4A /* GameFinishedState.swift */,
 				6B742CD5223FD7E700354DB1 /* GameStateFacade.swift */,
 			);
@@ -297,6 +300,7 @@
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
+				6B742CD82240E05A00354DB1 /* FiveMovesModeExecuteState.swift in Sources */,
 				F81F903C223D5CEC00D9EA4A /* Copying.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,

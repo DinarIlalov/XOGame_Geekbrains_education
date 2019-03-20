@@ -11,10 +11,17 @@ import Foundation
 struct PlayerMove: MoveCommand {
     
     let position: GameboardPosition
+    let player: Player
     let gameboard: Gameboard
     let gameboardView: GameboardView
     
     func execute() {
+        if gameboard.containsAnyPlayer(at: position) == true {
+            gameboardView.removeMarkView(at: position)
+        }
         
+        print("\(player) - \(position)")
+        self.gameboard.setPlayer(self.player, at: position)
+        self.gameboardView.placeMarkView(player.markViewPrototype.copy(), at: position)
     }
 }

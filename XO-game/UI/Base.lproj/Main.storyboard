@@ -18,27 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-aE-0Zn">
-                                <rect key="frame" x="125.5" y="191" width="124" height="30"/>
-                                <state key="normal" title="Two players game"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="twoPlayersGameSegue" id="SNu-c1-8qj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-TY-aCk">
-                                <rect key="frame" x="148" y="267" width="79" height="30"/>
-                                <state key="normal" title="Player vs AI"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="onePlayerGameSegue" id="6GW-UZ-U6I"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-Bt-cmb">
+                                <rect key="frame" x="125.5" y="245.5" width="124" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-aE-0Zn">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="30"/>
+                                        <state key="normal" title="Two players game"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="twoPlayersGameSegue" id="SNu-c1-8qj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-TY-aCk">
+                                        <rect key="frame" x="22.5" y="73" width="79" height="30"/>
+                                        <state key="normal" title="Player vs AI"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="onePlayerGameSegue" id="6GW-UZ-U6I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fJ-gX-tjb">
+                                        <rect key="frame" x="22.5" y="146" width="79" height="30"/>
+                                        <state key="normal" title="Five in Turn"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="fiveMovesGameSegue" id="wlH-83-o8t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8xd-TY-aCk" firstAttribute="centerX" secondItem="RSx-Le-gdL" secondAttribute="centerX" id="7Fp-01-8t1"/>
-                            <constraint firstItem="8xd-TY-aCk" firstAttribute="top" secondItem="9wq-aE-0Zn" secondAttribute="bottom" constant="46" id="fRI-zF-zeS"/>
-                            <constraint firstItem="9wq-aE-0Zn" firstAttribute="centerX" secondItem="RSx-Le-gdL" secondAttribute="centerX" id="nQQ-wS-4Ph"/>
-                            <constraint firstItem="9wq-aE-0Zn" firstAttribute="top" secondItem="cbo-fB-A9P" secondAttribute="top" constant="127" id="zzx-5o-Mw8"/>
+                            <constraint firstItem="P9O-Bt-cmb" firstAttribute="centerY" secondItem="RSx-Le-gdL" secondAttribute="centerY" id="1cg-51-Qbs"/>
+                            <constraint firstItem="P9O-Bt-cmb" firstAttribute="centerX" secondItem="RSx-Le-gdL" secondAttribute="centerX" id="Gux-TH-VvG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cbo-fB-A9P"/>
                     </view>
@@ -166,6 +176,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6GW-UZ-U6I"/>
+        <segue reference="wlH-83-o8t"/>
     </inferredMetricsTieBreakers>
 </document>
