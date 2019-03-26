@@ -26,3 +26,9 @@ public enum Player: CaseIterable {
         }
     }
 }
+
+extension Player {
+    static func random() -> Player {
+        return (Int.random(in: (1...2))%2 == 0) ? .first : .second
+    }
+}
